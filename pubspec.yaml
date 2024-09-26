@@ -1,0 +1,46 @@
+name: colores
+description: "Un juego interactivo para identificar colores correctamente."
+publish_to: 'none' # Elimina esta línea si deseas publicar en pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Añadimos shared_preferences para almacenar datos localmente
+  shared_preferences: ^2.0.15
+
+  # Añadimos google_fonts para usar fuentes modernas
+  google_fonts: ^5.0.0
+
+  # Añadimos los iconos de Cupertino para estilos de iOS
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Paquete de linting recomendado por Flutter para buenas prácticas de codificación
+  flutter_lints: ^3.0.0
+
+  # Añadimos flutter_launcher_icons para configurar el icono de la aplicación
+  flutter_launcher_icons: ^0.9.2
+
+flutter:
+  # Asegura que la fuente de iconos de Material esté incluida con tu aplicación,
+  # para que puedas usar los iconos en la clase material Icons.
+  uses-material-design: true
+
+  # Añade assets a tu aplicación, como imágenes o iconos.
+  assets:
+    - assets/icons/
+
+# Configuración de los iconos de la aplicación utilizando flutter_launcher_icons.
+# Este bloque debe estar al mismo nivel que el bloque `flutter:`.
+flutter_icons:
+  android: true        # Genera iconos para Android.
+  ios: true            # Genera iconos para iOS.
+  image_path: "assets/icons/app_icon.png"  # Ruta al icono de la aplicación.
